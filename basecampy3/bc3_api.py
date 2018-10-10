@@ -1,6 +1,7 @@
 """
 The only object you should have to import. Access all of the API from here.
 """
+from basecampy3.endpoints import vaults, uploads, attachments
 from .constants import USER_AGENT
 from datetime import datetime
 import dateutil.parser
@@ -121,6 +122,9 @@ class Basecamp3(object):
         self.todolist_groups = todolist_groups.TodoListGroups(self)
         self.todos = todos.Todos(self)
         self.todosets = todosets.TodoSets(self)
+        self.vaults = vaults.Vaults(self)
+        self.uploads = uploads.Uploads(self)
+        self.attachments = attachments.Attachments(self)
 
     @property
     def who_am_i(self):

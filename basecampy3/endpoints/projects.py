@@ -101,6 +101,11 @@ class Project(_base.BasecampObject):
         """
         return self._endpoint._api.people.list(project=self.id)
 
+    @property
+    def vault(self):
+        section = self._get_dock_section(constants.DOCK_NAME_VAULT)
+        return self._endpoint._api.vaults.get(project=self.id, vault=section['id'])
+
     def _get_dock_section(self, name):
         for section in self.dock:
             if section['name'] == name:
