@@ -1,3 +1,5 @@
+Note: on this fork, I have added file upload and access to vaults (i.e. folders and sub-folders of the Docs & Files section). It is mostly un-tested, so be warned.
+
 # BasecamPY3
 An easy-to-use Python interface to the [Basecamp 3 API](https://github.com/basecamp/bc3-api).
 
